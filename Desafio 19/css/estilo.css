@@ -1,0 +1,10 @@
+body{
+    background-color: #eaf5f5;
+}
+
+#box{
+    margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    border:2px dashed #a1a1a1a1
+}

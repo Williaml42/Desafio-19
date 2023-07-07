@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Desafio 19</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/estilo.css">
+    <script type="text/javascript">
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout("startTime()", 500);
+      }
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+
+      function muda_cor() {
+        var div = document.getElementById("box");
+        var cor = document.getElementById("i_color").value;
+
+        console.log(cor);
+
+        div.style.backgroundColor = cor;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="box"></div>
+    <input type="color" id="i_color" />
+    <button onclick="muda_cor()">Muda a cor</button>
+
+    <div id="txt">
+      <script type="text/javascript">
+        document.write(startTime());
+      </script>
+    </div>
+  </body>
+</html>
